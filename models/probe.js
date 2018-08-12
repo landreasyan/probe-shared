@@ -56,7 +56,7 @@ const ProbeSchema = new Schema ({
 
     notification_policy_id : {
         type: Schema.Types.ObjectId,
-        ref:'NotificationPolicy'
+        ref:'Notification-Policy'
      },
 
      user_id:{
