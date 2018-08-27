@@ -64,6 +64,10 @@ const ProbeSchema = new Schema ({
         ref:'User'
      },
 
+     locations:[{
+        type: String
+    }]
+
 });
 
 const Probe = mongoose.model('Probe',ProbeSchema);
