@@ -4,7 +4,8 @@ const Schema = mongoose.Schema;
 const ProbeResultSchema = new Schema ({
     
         probeTime: {
-            type: Number
+            type: Date, 
+            default: Date.now
         },
 
         error: {
