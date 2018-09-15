@@ -1,4 +1,7 @@
 const mqtt = require('mqtt');
+const mqttHost = process.env.BROKER_HOST || 'localhost';
+const mqttUser = process.env.MQTT_USER || false;
+const mqttPass = process.env.MQTT_PASS || false; 
 
 class MqttClient  {
 
@@ -15,8 +18,13 @@ class MqttClient  {
           resolve(this.client);
           return;
         }
+        
+        let options = {
+          username:mqttUser,
+          password:mqttPass
+        };
 
-        let client  = mqtt.connect('mqtt://localhost')
+        let client  = mqtt.connect('mqtt://'+ mqttHost, options)
  
         client.on('connect', () => {
                   this.client = client;
