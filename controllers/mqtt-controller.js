@@ -1,7 +1,7 @@
 const mqtt = require('mqtt');
 const mqttHost = process.env.BROKER_HOST || 'localhost';
-const mqttUser = process.env.MQTT_USER || false;
-const mqttPass = process.env.MQTT_PASS || false; 
+const mqttUser = process.env.MQTT_USER || null;
+const mqttPass = process.env.MQTT_PASS || null; 
 
 class MqttClient  {
 
