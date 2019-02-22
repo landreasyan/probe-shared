@@ -1,3 +1,5 @@
+require('dotenv').config();
+
 const mqtt = require('mqtt');
 const mqttHost = process.env.BROKER_HOST || 'localhost';
 const mqttUser = process.env.MQTT_USER || null;
