@@ -64,6 +64,11 @@ const ProbeSchema = new Schema ({
         ref:'User'
      },
 
+     active:{
+         type:Boolean,
+         default:true
+     },
+
      locations:[{
         type: String
     }]
