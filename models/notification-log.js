@@ -30,6 +30,10 @@ var NotificationLogSchema = new Schema({
         ref:'User'
      },
 
+    probeUrl:{
+        type: String
+    },
+
     probe_id:{
         type: Schema.Types.ObjectId,
         ref:'Probe'
