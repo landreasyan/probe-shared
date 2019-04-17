@@ -67,6 +67,7 @@ const ProbeSchema = new Schema ({
             value:{ 
                 type :String
             },
+            _id:false
         }]
     },
 
