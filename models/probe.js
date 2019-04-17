@@ -30,9 +30,11 @@ const ProbeSchema = new Schema ({
     },
     
 	matchPolicy: {
-		exactMatch: {
+
+		matchAll: {
 			type: Boolean
-		},
+        },
+        
 		keywords: {
 			type: [
 				String
@@ -40,18 +42,32 @@ const ProbeSchema = new Schema ({
 		}
 	},
     
-    body: {
+    requestBody: {
 		type: String
     },
-    
-	auth: {},
-    
-    json: {
+
+    requestBodyJson: {
 		type: Boolean
 	},
     
+	basicAuth: {
+        user:{
+            type:String
+        },
+        password:{
+            type:String
+        }
+    },
+    
     headers: {
-        
+        type: [{
+            key:{ 
+                type :String
+            },
+            value:{ 
+                type :String
+            },
+        }]
     },
 
     notification_policy_id : {
