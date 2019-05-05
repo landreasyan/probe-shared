@@ -3,6 +3,11 @@ const Schema = mongoose.Schema;
 
 const ProbeSchema = new Schema ({
     
+    probePrefix:{
+        type:String,
+        required:true,
+    },
+    
     probeURL:{
         type:String,
         required:true,
