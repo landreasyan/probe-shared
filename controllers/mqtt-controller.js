@@ -16,7 +16,6 @@ class MqttClient  {
       return new Promise(async (resolve, reject) => {
 
         if (this.client) {
-          console.log('Already connected.');
           resolve(this.client);
           return;
         }
