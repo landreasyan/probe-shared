@@ -1,5 +1,6 @@
 var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
+var NotificationPolicy = require('./notification-policy');
 
 var NotificationChannelSchema = new Schema({
     
@@ -32,5 +33,14 @@ var NotificationChannelSchema = new Schema({
      
 });
 
+NotificationChannelSchema.pre('remove',function(){
+  
+    NotificationPolicy.updateMany({ channel_ids:{ $in:this.id } },{ $pull:{channel_ids:this.id } })
+    .then(r => {
+        //console.log(r);
+    }).catch(e => {
+        //console.log(e);
+    })
+})
 
 module.exports = mongoose.model('Notification-Channel', NotificationChannelSchema);

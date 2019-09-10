@@ -1,5 +1,6 @@
 var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
+var Probe = require('./probe');
 
 var NotificationPolicySchema = new Schema({
     
@@ -39,5 +40,13 @@ var NotificationPolicySchema = new Schema({
     }]
 });
 
+NotificationPolicySchema.pre('remove',function(){
+    Probe.updateMany({ notification_policy_id:{ $in:this.id } }, { $unset:{ notification_policy_id : '' }})
+    .then(r => {
+        //console.log(r);
+    }).catch(e => {
+        //console.log(e);
+    })
+})
 
 module.exports = mongoose.model('Notification-Policy', NotificationPolicySchema);
