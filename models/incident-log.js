@@ -38,8 +38,7 @@ var IncidentSchema = new Schema({
     },
 
     notification_policy_name: {
-        type: String,
-        required: false
+        type: String
     },
 
     notification_policy_id:{
@@ -53,7 +52,8 @@ var IncidentSchema = new Schema({
 
     user_id:{
         type: Schema.Types.ObjectId,
-        ref:'User'
+        ref:'User',
+        required: false
      },
 
 
