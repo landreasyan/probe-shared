@@ -12,6 +12,10 @@ var IncidentSchema = new Schema({
         type: Boolean
     },  
 
+    errorMsg: {
+        type: String
+    },  
+
     probeUrl:{
         type: String
     },
