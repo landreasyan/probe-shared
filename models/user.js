@@ -3,9 +3,9 @@ var Schema = mongoose.Schema;
 var bcrypt = require('bcrypt-nodejs');
 const ObjectId = require('mongoose').Types.ObjectId; 
 
-const NotificationChannel = require('../probe-shared/models/notification-channel');
-const NotificationPolicy = require('../probe-shared/models/notification-policy');
-const NotificationHistory = require('../probe-shared/models/notification-log');
+const NotificationChannel = require('.notification-channel');
+const NotificationPolicy = require('./notification-policy');
+const NotificationHistory = require('./notification-log');
 
 
 var UserSchema = new Schema({
