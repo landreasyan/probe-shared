@@ -3,7 +3,7 @@ var Schema = mongoose.Schema;
 var bcrypt = require('bcrypt-nodejs');
 const ObjectId = require('mongoose').Types.ObjectId; 
 
-const NotificationChannel = require('.notification-channel');
+const NotificationChannel = require('./notification-channel');
 const NotificationPolicy = require('./notification-policy');
 const NotificationHistory = require('./notification-log');
 
