@@ -33,7 +33,7 @@ var IncidentSchema = new Schema({
         type:Number
     },
  
-    subject:{
+    incident:{
         type: String
     },
 
