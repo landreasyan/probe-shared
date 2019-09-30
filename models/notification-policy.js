@@ -9,12 +9,12 @@ var NotificationPolicySchema = new Schema({
         required: true
     },
     
-    threshold_loc: {
+    thresholdLoc: {
         type: Number,
         required: true
     },
 
-    threshold_policy: {
+    thresholdPolicy: {
         type: Number,
         required: true
     },
@@ -29,19 +29,19 @@ var NotificationPolicySchema = new Schema({
         default: true
     },
 
-    user_id:{
+    userId:{
         type: Schema.Types.ObjectId,
         ref:'User'
      },
      
-     channel_ids:[{
+     channelIds:[{
         type: Schema.Types.ObjectId,
         ref:'Notification-Channel'
     }]
 });
 
 NotificationPolicySchema.pre('remove',function(){
-    Probe.updateMany({ notification_policy_id:{ $in:this.id } }, { $unset:{ notification_policy_id : '' }})
+    Probe.updateMany({ notificationPolicyId:{ $in:this.id } }, { $unset:{ notificationPolicyId : '' }})
     .then(r => {
         //console.log(r);
     }).catch(e => {

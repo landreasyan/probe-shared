@@ -16,7 +16,7 @@ var NotificationLogSchema = new Schema({
         type: String
     },
 
-    channel_id:{
+    channelId:{
         type: Schema.Types.ObjectId,
         ref:'Notification-Channel'
     },
@@ -25,16 +25,16 @@ var NotificationLogSchema = new Schema({
         type: String
     },
 
-    user_id:{
+    userId:{
         type: Schema.Types.ObjectId,
         ref:'User'
      },
 
-    probeUrl:{
+    probeURL:{
         type: String
     },
 
-    probe_id:{
+    probeId:{
         type: Schema.Types.ObjectId,
         ref:'Probe'
     }

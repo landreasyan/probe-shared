@@ -69,7 +69,7 @@ const ProbeResultSchema = new Schema ({
             type: String
         },
 
-        probe_id:{
+        probeId:{
            type: Schema.Types.ObjectId,
            ref:'Probe'
         },

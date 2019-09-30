@@ -81,12 +81,12 @@ const ProbeSchema = new Schema ({
         default:true
     },
 
-    notification_policy_id:{
+    notificationPolicyId:{
         type: Schema.Types.ObjectId,
         ref:'Notification-Policy'
      },
 
-     user_id:{
+     userId:{
         type: Schema.Types.ObjectId,
         ref:'User'
      },

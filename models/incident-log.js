@@ -20,7 +20,7 @@ var IncidentSchema = new Schema({
         type: String
     },
 
-    probe_id:{
+    probeId:{
         type: Schema.Types.ObjectId,
         ref:'Probe'
     },
@@ -37,20 +37,20 @@ var IncidentSchema = new Schema({
         type: String
     },
 
-    notification_policy_name: {
+    notificationPolicyName: {
         type: String
     },
 
-    notification_policy_id:{
+    notificationPolicyId:{
         type: Schema.Types.ObjectId,
         ref:'Notification-Policy'
      },
 
-     notification_policy_threshold_status:{
+     notificationPolicyThresholdStatus:{
         type: String,
     },
 
-    user_id:{
+    userId:{
         type: Schema.Types.ObjectId,
         ref:'User',
         required: false

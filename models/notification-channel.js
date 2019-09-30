@@ -26,7 +26,7 @@ var NotificationChannelSchema = new Schema({
         default:false
     },
 
-    user_id:{
+    userId:{
         type: Schema.Types.ObjectId,
         ref:'User'
      },
@@ -35,7 +35,7 @@ var NotificationChannelSchema = new Schema({
 
 NotificationChannelSchema.pre('remove',function(){
   
-    NotificationPolicy.updateMany({ channel_ids:{ $in:this.id } },{ $pull:{channel_ids:this.id } })
+    NotificationPolicy.updateMany({ channelIds:{ $in:this.id } },{ $pull:{channelIds:this.id } })
     .then(r => {
         //console.log(r);
     }).catch(e => {
