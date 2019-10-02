@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
-var IncidentSchema = new Schema({
+var EventSchema = new Schema({
     
     logTime: {
         type: Date, 
@@ -33,7 +33,7 @@ var IncidentSchema = new Schema({
         type:Number
     },
  
-    incident:{
+    event:{
         type: String
     },
 
@@ -60,4 +60,4 @@ var IncidentSchema = new Schema({
 });
 
 
-module.exports = mongoose.model('Incident', IncidentSchema);
+module.exports = mongoose.model('Event', EventSchema);
