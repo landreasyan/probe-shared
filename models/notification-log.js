@@ -20,6 +20,10 @@ var NotificationLogSchema = new Schema({
         type: Schema.Types.ObjectId,
         ref:'Notification-Channel'
     },
+    
+    error: {
+        type: Boolean
+    },  
 
     subject:{
         type: String
