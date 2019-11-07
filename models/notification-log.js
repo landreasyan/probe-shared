@@ -5,7 +5,8 @@ var NotificationLogSchema = new Schema({
     
     logTime: {
         type: Date, 
-        default: Date.now
+        default: Date.now,
+        expires: '365d' 
     },
 
     channel: {

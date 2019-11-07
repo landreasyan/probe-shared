@@ -5,7 +5,8 @@ const ProbeResultSchema = new Schema ({
     
         probeTime: {
             type: Date, 
-            default: Date.now
+            default: Date.now,
+            expires: '365d' 
         },
 
         error: {
