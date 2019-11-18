@@ -100,9 +100,11 @@ const ProbeSchema = new Schema ({
      locations:[{
         type: String
     }],
+}, 
 
-    timestamps:true
-    
+{ 
+    timestamps:true 
+
 });
 
 const Probe = mongoose.model('Probe',ProbeSchema);
