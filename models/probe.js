@@ -13,6 +13,11 @@ const ProbeSchema = new Schema ({
         required:true,
     },
 
+    name: {
+        type: String,
+        required: true
+    },
+
     interval:{
         type:Number,
         required:true,
