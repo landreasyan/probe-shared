@@ -29,6 +29,48 @@ var UserSchema = new Schema({
     isVerified:{
         type:Boolean,
         default:false
+    },
+    
+    subscription:{
+        
+        expirationDate:{
+            type: Date,
+            default: () => new Date(+new Date() + 7 * 24 * 60 * 60 * 1000)
+        },
+
+       lastRenewal:{
+            type: Date
+        },
+
+        limits:{
+
+            probe:{
+                type:Number,
+                default:1
+            },
+
+            sms:{
+                type:Number,
+                default:10
+            },
+
+        },
+
+        usage:{
+
+            probe:{
+                type:Number,
+                default:0
+            },
+
+            sms:{
+                type:Number,
+                default:0
+            },
+        }
+
+
+
     }
 });
 
