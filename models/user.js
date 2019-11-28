@@ -30,6 +30,14 @@ var UserSchema = new Schema({
         type:Boolean,
         default:false
     },
+
+    paymentMethod:{
+
+        stripe:{
+            type:Object
+        }
+        
+    },
     
     subscription:{
         
