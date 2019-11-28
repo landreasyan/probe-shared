@@ -31,12 +31,15 @@ var UserSchema = new Schema({
         default:false
     },
 
-    paymentMethod:{
+    stripe:{
+        
+        paymentMethod:{
+            type:Object
+        },
 
-        stripe:{
+        customer:{
             type:Object
         }
-        
     },
     
     subscription:{
