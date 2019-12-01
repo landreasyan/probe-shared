@@ -33,12 +33,12 @@ var UserSchema = new Schema({
 
     stripe:{
         
-        paymentMethod:{
+        card:{
             type:Object
         },
 
-        customer:{
-            type:Object
+        customerId:{
+            type:String
         }
     },
     
@@ -53,35 +53,24 @@ var UserSchema = new Schema({
             type: Date
         },
 
-        limits:{
+        usage:{
 
-            probe:{
+            probesCount:{
+                type:Number,
+                default:0
+            },
+
+            maxAllowedProbesCount:{
                 type:Number,
                 default:1
             },
 
-            sms:{
+            smsCredits:{
                 type:Number,
                 default:10
-            },
-
-        },
-
-        usage:{
-
-            probe:{
-                type:Number,
-                default:0
-            },
-
-            sms:{
-                type:Number,
-                default:0
-            },
+            }
         }
-
-
-
+        
     }
 });
 
