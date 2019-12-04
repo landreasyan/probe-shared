@@ -33,7 +33,7 @@ var UserSchema = new Schema({
 
     stripe:{
         
-        card:{
+        paymentMethods:{
             type:Object
         },
 
