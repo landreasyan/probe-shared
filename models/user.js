@@ -32,6 +32,10 @@ var UserSchema = new Schema({
     },
 
     stripe:{
+
+        defaultPaymentMethod:{
+            type:String
+        },
         
         paymentMethods:{
             type:Object
