@@ -43,6 +43,10 @@ var UserSchema = new Schema({
 
         customerId:{
             type:String
+        },
+
+        subscriptionId:{
+            type:String
         }
     },
     
