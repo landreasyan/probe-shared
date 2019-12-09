@@ -31,6 +31,11 @@ var UserSchema = new Schema({
         default:false
     },
 
+    isActie:{
+        type:Boolean,
+        default:false
+    },
+
     stripe:{
 
         defaultPaymentMethod:{
@@ -56,7 +61,7 @@ var UserSchema = new Schema({
     
     subscription:{
         
-        expirationDate:{
+        trialExpirationDate:{
             type: Date,
             default: () => new Date(+new Date() + 7 * 24 * 60 * 60 * 1000)
         },
