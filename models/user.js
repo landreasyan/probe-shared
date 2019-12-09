@@ -31,7 +31,7 @@ var UserSchema = new Schema({
         default:false
     },
 
-    isActie:{
+    isActive:{
         type:Boolean,
         default:false
     },
