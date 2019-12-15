@@ -61,7 +61,7 @@ var UserSchema = new Schema({
     
     subscription:{
         
-        trialExpirationDate:{
+        endDate:{
             type: Date,
             default: () => new Date(+new Date() + 7 * 24 * 60 * 60 * 1000)
         },
@@ -80,6 +80,10 @@ var UserSchema = new Schema({
             maxAllowedProbesCount:{
                 type:Number,
                 default:1
+            },
+
+            subscriptionSmsCredits:{
+                type:Number
             },
 
             smsCredits:{
