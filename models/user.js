@@ -83,12 +83,13 @@ var UserSchema = new Schema({
             },
 
             subscriptionSmsCredits:{
-                type:Number
+                type:Number,
+                default:10
             },
 
             smsCredits:{
-                type:Number,
-                default:10
+                type:Number
+                
             }
         }
         
