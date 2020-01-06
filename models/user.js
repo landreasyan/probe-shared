@@ -33,7 +33,7 @@ var UserSchema = new Schema({
 
     isActive:{
         type:Boolean,
-        default:false
+        default:true
     },
 
     stripe:{
@@ -63,7 +63,7 @@ var UserSchema = new Schema({
         
         endDate:{
             type: Date,
-            default: () => new Date(+new Date() + 7 * 24 * 60 * 60 * 1000)
+            default: () => new Date(+new Date() + 14 * 24 * 60 * 60 * 1000)
         },
 
        lastRenewal:{
@@ -84,11 +84,12 @@ var UserSchema = new Schema({
 
             subscriptionSmsCredits:{
                 type:Number,
-                default:10
+                default:0
             },
 
             smsCredits:{
-                type:Number
+                type:Number,
+                default:5
                 
             }
         }
